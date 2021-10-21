@@ -1,6 +1,15 @@
 # show user event is not a function
 
-to get here, we made (to fit our project features) : 
+to reproduce : 
+```shell
+$ yarn
+$ yarn build
+$ yarn test
+```
+
+# how did we get there ?
+
+To fit our project features, we did : 
 
 ```shell
 $ npm init svelte@next
