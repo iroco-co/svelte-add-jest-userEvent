@@ -1,6 +1,6 @@
-import { render, RenderResult } from '@testing-library/svelte';
+import { render, RenderResult, fireEvent } from '@testing-library/svelte';
 import Index from './index.svelte';
-import userEvent from '@testing-library/user-event';
+
 /**
  * @jest-environment jsdom
  */
@@ -19,9 +19,9 @@ describe('Index', () => {
 
     test('should increment counter', () => {
       const button = renderedComponent.container.querySelector('.btn-increment');
-      userEvent.click(button);
-      userEvent.click(button);
-      expect(renderedComponent.getByText('2')).toBeInTheDocument();
+      fireEvent.click(button);
+      // await fireEvent.input(getByPlaceholderText("Nom d'utilisateur"),{target: {value: '.JohnDoe.'}})
+      expect(renderedComponent.getByText('1')).toBeInTheDocument();
     });
   });
 });
