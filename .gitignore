@@ -1,9 +1,0 @@
-node_modules
-.idea
-dist
-test/unit/coverage/lcov-report/
-yarn-error.log
-coverage/
-build/
-.svelte-kit
-/package
